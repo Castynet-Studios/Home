@@ -1,4 +1,7 @@
-function getUserInfo() {
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./firebaseConfig";
+
+export function getUserInfo() {
   var language = navigator.language || navigator.userLanguage || "en";
   var { downlink, effectiveType, rtt, saveData } = navigator.connection || {};
   var browser = navigator.vendor || "";
@@ -13,7 +16,6 @@ function getUserInfo() {
 }
 
 export function trackPerformance(performance) {
-  const user = getUserInfo();
   const { name, value, delta, id, entries } = performance;
-  console.log(user, name, value, delta, id, entries);
+  logEvent(analytics, { name, value, delta, id, entries });
 }
