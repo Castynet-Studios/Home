@@ -7,22 +7,58 @@
 
 :root {
   --white: #ffffff;
+  --whiteTwo: #ffffffaa;
   --dark: #000000;
+  --darkTwo: #000000aa;
   --grayOne: #969696;
   --grayTwo: #efefef;
   --darkGreyOne: #222222;
   --darkGreyTwo: #333333;
   --accentOne: #ffc107;
   --accentTwo: #ff1493;
+  --boxShadow: 8px 40px 80px -16px rgba(0, 0, 0, 0.5);
+  --radius: 32px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background-color: var(--grayTwo);
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  color: #444;
+  padding: 0 15px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 h1 {
   font-weight: 600;
-  font-size: 72px;
-  line-height: 80px;
+  font-size: 60px;
+  line-height: 70px;
   letter-spacing: -4%;
+}
+
+a {
+  color: var(--digikidsLightBlue);
+  text-decoration: none;
+}
+
+a:active,
+a:focus,
+button:active,
+button:focus {
+  outline: 0;
+  outline-style: none;
+  -moz-outline-style: none;
 }
